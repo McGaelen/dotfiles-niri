@@ -1,0 +1,7 @@
+window-rule {
+  match is-floating=false
+
+  // default-column-width {
+    // proportion 0.5
+  // }
+}

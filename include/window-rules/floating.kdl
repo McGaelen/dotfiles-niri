@@ -1,0 +1,32 @@
+window-rule {
+  match is-floating=true
+  border { off; }
+}
+
+window-rule {
+  match is-floating=true is-active=true
+  shadow {
+    on
+    color "#000000"
+    softness 75
+    spread -6
+    offset x=0 y=10
+  }
+}
+
+window-rule {
+  match is-floating=true is-active=false
+  shadow {
+    on
+    color "#000000"
+    softness 75
+    spread -20
+    offset x=0 y=10
+  }
+}
+
+// Windows to open floating as default
+window-rule {
+  match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+  open-floating true
+}

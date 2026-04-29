@@ -1,0 +1,27 @@
+// Input device configuration.
+// Find the full list of options on the wiki:
+// https://yalter.github.io/niri/Configuration:-Input
+input {
+  // focus-follows-mouse
+
+  keyboard {
+    // Enable numlock on startup, omitting this setting disables it.
+    numlock
+  }
+
+  touchpad {
+    natural-scroll
+    accel-speed 0
+    accel-profile "adaptive"
+    scroll-factor 0.3
+  }
+
+  mouse {
+    // Disabling mouse accel: https://github.com/YaLTeR/niri/discussions/1917
+    accel-speed -0.65 // between 1 and -1
+    // accel-speed 0
+    accel-profile "flat"
+  }
+}
+
+include "screenshare-mode.kdl"

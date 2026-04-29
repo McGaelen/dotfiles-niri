@@ -1,0 +1,35 @@
+// You can configure outputs by their name, which you can find
+// by running `niri msg outputs` while inside a niri instance.
+// Find more information on the wiki:
+// https://yalter.github.io/niri/Configuration:-Outputs
+// First DisplayPort output (currently Samsung OLED)
+output "DP-1" {
+  // Resolution and, optionally, refresh rate of the output.
+  // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
+  // If the refresh rate is omitted, niri will pick the highest refresh rate
+  // for the resolution.
+  // If the mode is omitted altogether or is invalid, niri will pick one automatically.
+  // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
+  mode "2560x1440@359.999"
+  scale 1   // You can use integer or fractional scale, for example use 1.5 for 150% scale.
+  position x=1024 y=0
+  background-color "#000000"
+  backdrop-color "#000000"
+  variable-refresh-rate on-demand=true
+  focus-at-startup
+}
+
+// USB4 Output (currently RICOH portable monitor)
+// This monitor sits centered below DP-1.
+// To calculate: x = (DP-1.width / scale / 2) - (DP-4.width / scale / 2)
+// with 1.33 scale, the dimensions are 1536x864
+output "DP-2" {
+  mode "1280x1024@75.025"
+  position x=0 y=0
+  background-color "#000000"
+  backdrop-color "#000000"
+}
+
+output "LG Electronics LG TV 0x01010101" {
+  scale 2
+}

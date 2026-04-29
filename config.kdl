@@ -1,0 +1,38 @@
+// This config is in the KDL format: https://kdl.dev
+// "/-" comments out the following node.
+// Check the wiki for a full description of the configuration:
+// https://yalter.github.io/niri/Configuration:-Introduction
+
+include "include/env.kdl"
+include "include/input/index.kdl"
+include "include/layout/index.kdl"
+include "include/startup.kdl"
+include "include/window-rules/index.kdl"
+include "include/binds.kdl"
+include "include/outputs.kdl"
+
+// You can change the path where screenshots are saved.
+// A ~ at the front will be expanded to the home directory.
+// The path is formatted with strftime(3) to give you the screenshot date and time.
+// You can also set this to null to disable saving screenshots to disk.
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+// Animation settings.
+// The wiki explains how to configure individual animations:
+// https://yalter.github.io/niri/Configuration:-Animations
+animations {
+  // Slow down all animations by this factor. Values below 1 speed them up instead.
+  slowdown 0.3
+}
+
+cursor {
+  xcursor-theme "breeze_cursors"
+  xcursor-size 28
+  hide-when-typing
+}
+
+recent-windows { on; }
+
+gestures {
+  hot-corners { off; }
+}

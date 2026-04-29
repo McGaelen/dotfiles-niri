@@ -1,0 +1,14 @@
+window-rule {
+  // Adding additional `match` directives uses "OR" logic
+  // (https://yalter.github.io/niri/Configuration%3A-Window-Rules.html#window-matching)
+  // is-active=true means it only applies when the game window is focused.
+  match app-id=r#"^steam_app_[\d]+$"# is-active=true
+  // Replace <game window title> if a game isn't launched from steam
+  // match title="<game window title>" is-active=true
+  variable-refresh-rate true
+}
+
+window-rule {
+  match app-id=r#"^steam_app_[\d]+$"#
+  open-fullscreen true
+}
