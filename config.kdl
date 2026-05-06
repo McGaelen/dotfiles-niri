@@ -10,6 +10,7 @@ include "include/startup.kdl"
 include "include/window-rules/index.kdl"
 include "include/binds.kdl"
 include "include/outputs.kdl"
+include "include/layer-rules.kdl"
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -25,14 +26,21 @@ animations {
   slowdown 0.3
 }
 
-cursor {
-  xcursor-theme "breeze_cursors"
-  xcursor-size 28
-  hide-when-typing
-}
+// cursor {
+  // xcursor-theme "breeze_cursors"
+  // xcursor-size 28
+  // hide-when-typing
+// }
 
 recent-windows { on; }
 
 gestures {
   hot-corners { off; }
 }
+
+debug {
+    // Allows notification actions and window activation from Noctalia.
+    honor-xdg-activation-with-invalid-serial
+}
+
+prefer-no-csd

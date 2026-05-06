@@ -3,10 +3,3 @@ window-rule {
     blur true
   }
 }
-
-layer-rule {
-
-  background-effect {
-    blur true
-  }
-}
