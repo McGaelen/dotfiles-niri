@@ -35,6 +35,8 @@ binds {
   Mod+Ctrl+Down { focus-monitor-down; }
   Mod+Ctrl+Left { focus-monitor-left; }
   Mod+Ctrl+Right { focus-monitor-right; }
+  Mod+Ctrl+WheelScrollUp { focus-monitor-left; }
+  Mod+Ctrl+WheelScrollDown { focus-monitor-right; }
 
   // Moving windows:
   // Same as switching windows, but add Shift.
