@@ -7,13 +7,13 @@ binds {
     spawn "vicinae" "open";
   }
   Mod+Shift+V repeat=false {
-    spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history";
+    spawn "vicinae" "vicinae://launch/clipboard/history";
   }
   Mod+Ctrl+Space repeat=false {
-    spawn "vicinae" "vicinae://extensions/vicinae/core/search-emojis";
+    spawn "vicinae" "vicinae://launch/core/search-emojis";
   }
   Mod+Shift+F repeat=false {
-    spawn "vicinae" "vicinae://extensions/vicinae/files/search";
+    spawn "vicinae" "vicinae://launch/files/search";
   }
 
   // Quitting apps
@@ -93,11 +93,26 @@ binds {
   Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
   // Session controls
-  Mod+Shift+L { spawn-sh "gtklock"; }
+  Mod+Shift+L { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
   Mod+Shift+E { quit; }
-  Ctrl+Alt+Delete { quit; }
+  Ctrl+Alt+Delete { spawn-sh "ptyxis"; }
 
   // Powers off the monitors. To turn them back on, do any input like
   // moving the mouse or pressing any other key.
   Mod+Shift+P { power-off-monitors; }
+
+  // ─── Media Controls ───
+  XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+  XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+  XF86AudioMute                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+  XF86AudioMicMute                    allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+  XF86AudioNext                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
+  XF86AudioPrev                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
+  XF86AudioPlay                       allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+  XF86AudioPause                      allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+
+  // ─── Brightness Controls ───
+  XF86MonBrightnessUp                 allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+  XF86MonBrightnessDown               allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+
 }
