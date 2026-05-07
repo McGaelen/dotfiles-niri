@@ -31,9 +31,10 @@ layout {
   }
 
   // Squares that are drawn when dragging around tiled windows
-  insert-hint {
-    color "#0ba792aa"
-  }
+  // NOTE: now managed by Noctalia.
+  // insert-hint {
+    // color "#0ba792aa"
+  // }
 
   // If you leave the brackets empty, the windows themselves will decide their initial width.
   default-column-width {}
@@ -44,6 +45,4 @@ layout {
   // }
 
   focus-ring { off; }
-
-  struts {}
 }
