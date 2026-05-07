@@ -26,11 +26,11 @@ animations {
   slowdown 0.3
 }
 
-// cursor {
-  // xcursor-theme "breeze_cursors"
-  // xcursor-size 28
-  // hide-when-typing
-// }
+cursor {
+  xcursor-theme "breeze_cursors"
+  xcursor-size 30
+  hide-when-typing
+}
 
 recent-windows { on; }
 
@@ -43,4 +43,4 @@ debug {
     honor-xdg-activation-with-invalid-serial
 }
 
-prefer-no-csd
+include "./noctalia.kdl"
