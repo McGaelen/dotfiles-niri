@@ -25,4 +25,4 @@ input {
   }
 }
 
-include "screenshare-mode.kdl"
+include optional=true "screenshare-mode.kdl"
