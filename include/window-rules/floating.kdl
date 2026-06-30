@@ -32,7 +32,7 @@ window-rule {
 }
 
 window-rule {
-  match app-id="thunar" title="^File Operation Progress"
+  match app-id="thunar"
   open-floating true
 }
 

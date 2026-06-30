@@ -3,10 +3,3 @@ window-rule {
     blur true
   }
 }
-
-layer-rule {
-  match namespace="^waybar$"
-  background-effect {
-    blur true
-  }
-}
