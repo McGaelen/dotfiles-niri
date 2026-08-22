@@ -44,4 +44,4 @@ debug {
     honor-xdg-activation-with-invalid-serial
 }
 
-include "./noctalia.kdl"
+include optional=true "./noctalia.kdl"
